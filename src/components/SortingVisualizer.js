@@ -33,6 +33,7 @@ class SortingVisualizer extends Component {
 						style={{height: `${value}px`}}>
 					</div>
 				))}
+        <button onClick={() => this.resetArray()}>Generate New Array</button>
 			</div>
 		);
 	}
