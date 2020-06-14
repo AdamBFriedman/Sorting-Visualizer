@@ -1,5 +1,6 @@
 body {
   text-align: center;
+  background-color: #051e3e;
 }
 
 .array-container {
@@ -10,7 +11,7 @@ body {
 
 .array-bar {
   width: 2px;
-  background-color: blue;
+  background-color: #851e3e;
   display: inline-block;
   margin: 0 1px;
 }

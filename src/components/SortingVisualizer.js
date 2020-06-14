@@ -5,13 +5,13 @@ import {getMergeSortAnimations} from '../sortingAlgorithms';
 const ANIMATION_SPEED_MS = 1;
 
 // Change this value for the number of bars (value) in the array.
-const NUMBER_OF_ARRAY_BARS = 310;
+const NUMBER_OF_ARRAY_BARS = 570;
 
 // This is the main color of the array bars.
-const PRIMARY_COLOR = '#234432';
+const PRIMARY_COLOR = '#651e3e';
 
 // This is the color of array bars that are being compared throughout the animations.
-const SECONDARY_COLOR = 'red';
+const SECONDARY_COLOR = '#451e3e • ';
 
 export default class SortingVisualizer extends React.Component {
   constructor(props) {
@@ -56,18 +56,6 @@ export default class SortingVisualizer extends React.Component {
         }, i * ANIMATION_SPEED_MS);
       }
     }
-  }
-
-  quickSort() {
-    
-  }
-
-  heapSort() {
-    
-  }
-
-  bubbleSort() {
-    
   }
 
 	render() {
