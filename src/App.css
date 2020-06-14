@@ -46,7 +46,12 @@ button:hover {
   transition: all 0.4s ease 0s;
 }
 
-.vintage__container {
+label {
+  color: white;
+}
+
+/*Typeface for "Merge Sort" */
+.mergeSort__container {
   margin: 25px auto 40px;
   position: absolute;
   bottom: 17vh;
@@ -54,7 +59,7 @@ button:hover {
   transform: translate(-50%);
 }
 
-.vintage {
+.mergeSort {
   font-family: 'Six Caps', sans-serif;
   font-size: 160px;
   letter-spacing: 10px;
@@ -63,7 +68,7 @@ button:hover {
   position: relative;
 }
 
-.vintage__top {
+.mergeSort__top {
   background: linear-gradient(rgb(240, 220, 200), rgb(230, 200, 160));
   -webkit-background-clip: text;
   background-clip: text;
@@ -73,7 +78,7 @@ button:hover {
   text-fill-color: transparent;
 }
 
-.vintage__bot {
+.mergeSort__bot {
   text-shadow: 
     2px 1px #ed3330,
     4px 2px #ed3330,
