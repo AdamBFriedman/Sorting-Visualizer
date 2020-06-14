@@ -11,7 +11,7 @@ body {
 
 .array-bar {
   width: 2px;
-  background-color: #ed3330;
+  /* background-color: #ed3330; */
   display: inline-block;
   margin: 0 1px;
 }

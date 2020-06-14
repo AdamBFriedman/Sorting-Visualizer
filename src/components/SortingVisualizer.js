@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import {getMergeSortAnimations} from '../sortingAlgorithms';
 
 // Change this value for the speed of the animations.
@@ -9,6 +9,9 @@ const NUMBER_OF_ARRAY_BARS = 570;
 
 // This is the main color of the array bars.
 const PRIMARY_COLOR = 'white';
+
+// We use let instead of const so we can generate random colors (button below)
+let STARTING_COLOR = '#ed3330';
 
 // This is the color of array bars that are being compared throughout the animations.
 const SECONDARY_COLOR = '#451e3e';
@@ -58,6 +61,12 @@ export default class SortingVisualizer extends React.Component {
     }
   }
 
+  randomColor() {
+    let randomColor = "#" + Math.random().toString(16).slice(2, 8)
+    STARTING_COLOR = randomColor;
+    this.resetArray();
+  }
+
 	render() {
 		const { array } = this.state;
 		return (
@@ -67,7 +76,7 @@ export default class SortingVisualizer extends React.Component {
           <div 
             className="array-bar" 
             key={idx}
-						style={{height: `${value}px`}}>
+						style={{height: `${value}px`, backgroundColor: STARTING_COLOR}}>
 					</div>
 				))}
         
@@ -75,6 +84,7 @@ export default class SortingVisualizer extends React.Component {
       <div className="button-row">
         <button onClick={() => this.resetArray()}>Generate New Array</button>
         <button onClick={() => this.mergeSort()}>Merge Sort</button>
+        <button onClick={() => this.randomColor()}>Random Color</button>
       </div>
       </>
 		);
