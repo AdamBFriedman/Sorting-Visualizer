@@ -1,28 +1,16 @@
 import React from 'react';
 import { getMergeSortAnimations } from '../sortingAlgorithms';
 
-// Change this value for the speed of the animations.
-const ANIMATION_SPEED_MS = 1;
-
-// Change this value for the number of bars (value) in the array.
-const NUMBER_OF_ARRAY_BARS = 570;
-
-// This is the main color of the array bars.
-const PRIMARY_COLOR = 'white';
-
-// We use let instead of const so we can generate random colors (button below)
-let STARTING_COLOR = '#ed3330';
-
-// This is the color of array bars that are being compared throughout the animations.
-const SECONDARY_COLOR = '#451e3e';
-
 export default class SortingVisualizer extends React.Component {
 	constructor(props) {
 		super(props);
 
 		this.state = {
 			array: [],
-			input: '',
+      arrayBars: '570',
+      animationSpeed: 1,
+      primaryColor: '#fff',
+      startingColor: '#ed3330'
 		};
 	}
 
@@ -32,7 +20,7 @@ export default class SortingVisualizer extends React.Component {
 
 	resetArray() {
 		const array = [];
-		for (let i = 0; i < NUMBER_OF_ARRAY_BARS; i++) {
+		for (let i = 0; i < this.state.arrayBars; i++) {
 			array.push(randomNumFromInterval(5, 730));
 		}
 		this.setState({ array });
@@ -47,24 +35,24 @@ export default class SortingVisualizer extends React.Component {
 				const [barOneIdx, barTwoIdx] = animations[i];
 				const barOneStyle = arrayBars[barOneIdx].style;
 				const barTwoStyle = arrayBars[barTwoIdx].style;
-				const color = i % 3 === 0 ? SECONDARY_COLOR : PRIMARY_COLOR;
+				const color = i % 3 === 0 ? this.state.startingColor : this.state.primaryColor;
 				setTimeout(() => {
 					barOneStyle.backgroundColor = color;
 					barTwoStyle.backgroundColor = color;
-				}, i * ANIMATION_SPEED_MS);
+				}, i * this.state.animationSpeed);
 			} else {
 				setTimeout(() => {
 					const [barOneIdx, newHeight] = animations[i];
 					const barOneStyle = arrayBars[barOneIdx].style;
 					barOneStyle.height = `${newHeight}px`;
-				}, i * ANIMATION_SPEED_MS);
+				}, i * this.state.animationSpeed);
 			}
 		}
 	}
 
 	newArray() {
 		const array = [];
-		for (let i = 0; i < NUMBER_OF_ARRAY_BARS; i++) {
+		for (let i = 0; i < this.state.arrayBars; i++) {
 			array.push(randomNumFromInterval(5, 730));
 		}
 		this.setState({ array });
@@ -72,17 +60,17 @@ export default class SortingVisualizer extends React.Component {
 
 	randomColor() {
 		let randomColor = '#' + Math.random().toString(16).slice(2, 8);
-		STARTING_COLOR = randomColor;
+		this.setState({ startingColor: randomColor})
 		this.resetArray();
 	}
 
 	handleChange(e) {
-		this.setState({ input: e.target.value });
+		this.setState({ arrayBars: e.target.value });
 	}
 
 	handleClick() {
 		const array = [];
-		for (let i = 0; i < this.state.input; i++) {
+		for (let i = 0; i < this.state.arrayBars; i++) {
 			array.push(randomNumFromInterval(5, 730));
 		}
 		this.setState({ array });
@@ -97,7 +85,7 @@ export default class SortingVisualizer extends React.Component {
 						<div
 							className="array-bar"
 							key={idx}
-							style={{ height: `${value}px`, backgroundColor: STARTING_COLOR }}
+							style={{ height: `${value}px`, backgroundColor: this.state.startingColor }}
 						></div>
 					))}
 				</div>
@@ -111,7 +99,7 @@ export default class SortingVisualizer extends React.Component {
 					<button onClick={() => this.randomColor()}>Random Color</button>
 
 					<label>
-						What length would you like the array (enter a number)?
+						Enter a number for a new array length
 					</label>
 					<input type="text" name="input" value={this.state.input} onChange={this.handleChange.bind(this)} />
 					<button type="button" onClick={() => this.handleClick()}>Enter</button>
