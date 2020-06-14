@@ -5,20 +5,20 @@ body {
 
 .array-container {
   position: absolute;
+  top: 5vh;
   left: 5vw;
   right: 5vw;
 }
 
 .array-bar {
   width: 2px;
-  /* background-color: #ed3330; */
   display: inline-block;
   margin: 0 1px;
 }
 
 .button-row {
   position: absolute;
-  bottom: 5vh;
+  bottom: 1vh;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -52,9 +52,9 @@ label {
 
 /*Typeface for "Merge Sort" */
 .mergeSort__container {
-  margin: 25px auto 40px;
+  margin: 3em 0;
   position: absolute;
-  bottom: 17vh;
+  bottom: 15vh;
   left: 50%;
   transform: translate(-50%);
 }
@@ -98,4 +98,8 @@ label {
     34px 17px rgba(0, 0, 0, 0.3),
     36px 18px rgba(0, 0, 0, 0.1),
     40px 20px rgba(0, 0, 0, 0.1);
+}
+
+.length {
+  color: white;
 }
