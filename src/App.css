@@ -45,3 +45,52 @@ button:hover {
   box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
   transition: all 0.4s ease 0s;
 }
+
+.vintage__container {
+  margin: 25px auto 40px;
+  position: absolute;
+  bottom: 17vh;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.vintage {
+  font-family: 'Six Caps', sans-serif;
+  font-size: 160px;
+  letter-spacing: 10px;
+  line-height: 1;
+  margin: 0;
+  position: relative;
+}
+
+.vintage__top {
+  background: linear-gradient(rgb(240, 220, 200), rgb(230, 200, 160));
+  -webkit-background-clip: text;
+  background-clip: text;
+  position: absolute;
+  z-index: 1;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+}
+
+.vintage__bot {
+  text-shadow: 
+    2px 1px #ed3330,
+    4px 2px #ed3330,
+    6px 4px #ed3330,
+    8px 5px #ed3330,
+    10px 6px #ed3330,
+    12px 7px #ed3330,
+    14px 8px #ed3330,
+    16px 9px black,
+    18px 10px black,
+    20px 11px black,
+    22px 12px black,
+    24px 13px black,
+    28px 14px rgba(0, 0, 0, 0.9),
+    30px 15px rgba(0, 0, 0, 0.7),
+    32px 16px rgba(0, 0, 0, 0.5),
+    34px 17px rgba(0, 0, 0, 0.3),
+    36px 18px rgba(0, 0, 0, 0.1),
+    40px 20px rgba(0, 0, 0, 0.1);
+}

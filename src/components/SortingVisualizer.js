@@ -81,6 +81,10 @@ export default class SortingVisualizer extends React.Component {
 				))}
         
 			</div>
+      <div class="vintage__container">
+  <p class="vintage vintage__top">MERGE SORT</p>
+  <p class="vintage vintage__bot">MERGE SORT</p>
+</div>
       <div className="button-row">
         <button onClick={() => this.resetArray()}>Generate New Array</button>
         <button onClick={() => this.mergeSort()}>Merge Sort</button>
