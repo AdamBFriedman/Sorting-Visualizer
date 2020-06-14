@@ -1,7 +1,11 @@
+body {
+  text-align: center;
+}
+
 .array-container {
   position: absolute;
-  left: 100px;
-  max-width: 100vw;
+  left: 5vw;
+  right: 5vw;
 }
 
 .array-bar {
@@ -9,4 +13,15 @@
   background-color: blue;
   display: inline-block;
   margin: 0 1px;
+}
+
+.button-row {
+  position: absolute;
+  bottom: 5vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+button {
+  margin: 1em;
 }

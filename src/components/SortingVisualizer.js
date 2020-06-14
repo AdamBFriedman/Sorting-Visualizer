@@ -16,15 +16,33 @@ class SortingVisualizer extends Component {
 	resetArray() {
 		const array = [];
 
-		for (let i = 0; i < 585; i++) {
+		for (let i = 0; i < 550; i++) {
 			array.push(randomNumFromInterval(5, 1000));
 		}
 
 		this.setState({ array });
-	}
+  }
+  
+  mergeSort() {
+
+  }
+
+  quickSort() {
+    
+  }
+
+  heapSort() {
+    
+  }
+
+  bubbleSort() {
+    
+  }
+
 	render() {
 		const { array } = this.state;
 		return (
+      <>
 			<div className="array-container">
 				{array.map((value, idx) => (
           <div 
@@ -33,8 +51,16 @@ class SortingVisualizer extends Component {
 						style={{height: `${value}px`}}>
 					</div>
 				))}
-        <button onClick={() => this.resetArray()}>Generate New Array</button>
+        
 			</div>
+      <div className="button-row">
+        <button onClick={() => this.resetArray()}>Generate New Array</button>
+        <button onClick={() => this.mergeSort()}>Merge Sort</button>
+        <button onClick={() => this.quickSort()}>Quick Sort</button>
+        <button onClick={() => this.heapSort()}>Heap Sort</button>
+        <button onClick={() => this.bubbleSort()}>Bubble Sort</button>
+      </div>
+      </>
 		);
 	}
 }
