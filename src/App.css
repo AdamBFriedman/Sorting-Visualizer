@@ -146,6 +146,7 @@ input[type=number] {
     position: absolute;
     bottom: -42vh;
     width: 90%;
+    transform: translate(-50%, -50%);
   }
 
   .mergeSort {
