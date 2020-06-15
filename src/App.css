@@ -100,7 +100,6 @@ input[type=number] {
   z-index: 1;
   -webkit-text-fill-color: transparent;
   text-fill-color: transparent;
-  text-align: center;
 }
 
 .mergeSort__bot {
@@ -151,6 +150,10 @@ input[type=number] {
 
   .mergeSort {
     font-size: 2em;
+  }
+
+  .mergeSort__top {
+    left: 5vw;
   }
 
   button {
