@@ -80,7 +80,7 @@ export default class SortingVisualizer extends React.Component {
 		const { array } = this.state;
 		return (
 			<div className="flex-wrapper">
-				<h1 className="length">Current Array Length: {this.state.arrayBars}</h1>
+				
 				<div className="array-container">
 					{array.map((value, idx) => (
 						<div
@@ -107,7 +107,8 @@ export default class SortingVisualizer extends React.Component {
 						Enter
 					</button>
 				</div>
-				
+				<h1 className="length">Current Array Length: {this.state.arrayBars}</h1>
+
 				<div className="mergeSort__container">
 					<p className="mergeSort mergeSort__top">MERGE SORT</p>
 					<p className="mergeSort mergeSort__bot">MERGE SORT</p>
