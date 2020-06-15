@@ -79,7 +79,7 @@ export default class SortingVisualizer extends React.Component {
 	render() {
 		const { array } = this.state;
 		return (
-			<>
+			<div className="flex-wrapper">
 				<div className="array-container">
 					{array.map((value, idx) => (
 						<div
@@ -111,7 +111,7 @@ export default class SortingVisualizer extends React.Component {
 					</button>
 				</div>
 				<h1 className="length">Current Array Length: {this.state.arrayBars}</h1>
-			</>
+			</div>
 		);
 	}
 }

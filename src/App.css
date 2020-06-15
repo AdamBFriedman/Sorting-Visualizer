@@ -3,11 +3,19 @@ body {
   background-color: #051e3e;
 }
 
+.flex-wrapper {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
 .array-container {
-  position: absolute;
+  flex: 1;
+  /* position: absolute;
   top: 5vh;
   left: 5vw;
-  right: 5vw;
+  right: 5vw; */
 }
 
 .array-bar {
@@ -17,10 +25,10 @@ body {
 }
 
 .button-row {
-  position: absolute;
+  /* position: absolute;
   bottom: -10vh !important;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); */
   width: 100vw;
 }
 
@@ -78,9 +86,9 @@ input[type=number] {
 .mergeSort__container {
   margin: 3em 0;
   position: absolute;
-  bottom: -15vh;
+  bottom: 10vh;
   left: 50%;
-  transform: translate(-50%, 140%);
+  transform: translate(-50%, 50%);
 }
 
 .mergeSort {
