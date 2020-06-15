@@ -80,7 +80,7 @@ input[type=number] {
   position: absolute;
   bottom: -15vh;
   left: 50%;
-  transform: translate(-50%, 90%);
+  transform: translate(-50%, 140%);
 }
 
 .mergeSort {
