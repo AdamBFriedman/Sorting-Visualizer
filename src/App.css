@@ -84,11 +84,11 @@ input[type=number] {
 
 /*Typeface for "Merge Sort" */
 .mergeSort__container {
-  margin: 3em 0;
-  position: absolute;
+  margin: 3em auto;
+  /* position: absolute;
   bottom: 10vh;
   left: 50%;
-  transform: translate(-50%, 50%);
+  transform: translate(-50%, 50%); */
 }
 
 .mergeSort {
