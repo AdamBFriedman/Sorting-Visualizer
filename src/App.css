@@ -78,9 +78,9 @@ input[type=number] {
 .mergeSort__container {
   margin: 3em 0;
   position: absolute;
-  bottom: -20vh !important;
+  bottom: -15vh;
   left: 50%;
-  transform: translate(-50%);
+  transform: translate(-50%, 90%);
 }
 
 .mergeSort {
