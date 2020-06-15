@@ -1,6 +1,7 @@
 body {
   text-align: center;
   background-color: #051e3e;
+  max-height: 100vh !important;
 }
 
 .flex-wrapper {
