@@ -150,11 +150,11 @@ input[type=number] {
   }
 
   .mergeSort__container {
-    display: none;
-    margin: 0 0 1em 0;
+    display: none !important;
+    /* margin: 0 0 1em 0; */
     /* position: absolute;
     bottom: -42vh; */
-    width: 90%;
+    /* width: 90%; */
   }
 
   /* .mergeSort {
