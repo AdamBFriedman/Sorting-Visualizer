@@ -151,8 +151,8 @@ input[type=number] {
 
   .mergeSort__container {
     margin: 0 0 1em 0;
-    position: absolute;
-    bottom: -42vh;
+    /* position: absolute;
+    bottom: -42vh; */
     width: 90%;
   }
 
@@ -161,7 +161,7 @@ input[type=number] {
   }
 
   .mergeSort__top {
-    left: 10vw !important;
+    /* left: 10vw !important; */
   }
 
   button {
