@@ -139,14 +139,15 @@ input[type=number] {
 @media only screen and (max-width: 600px) {
 
   .array-container {
-    /* position: absolute;
-    top: -50vh;
-    height: 30vh; */
+    position: absolute;
+    top: -8vh;
+    /* height: 30vh; */
+    transform: scale(0.75);
   }
 
   .array-bar {
     /* height: 10vh !important; */
-    height: 30vh;
+    /* height: 30vh; */
   }
 
   .mergeSort__container {
@@ -167,17 +168,17 @@ input[type=number] {
 
   button {
     /* transform: scale(0.5); */
-    margin: 5px 0;
+    margin: 5px 5px;
     padding: 0.5em;
     bottom: 0 !important;
   }
 
   .button-row {
     position: absolute;
-    bottom: 1vh;
+    bottom: -9vh;
     left: 50%;
-    transform: translate(-50%, 110%);
-    width: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
   }
 
   label {
