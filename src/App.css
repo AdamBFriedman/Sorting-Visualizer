@@ -175,7 +175,7 @@ input[type=number] {
 
   .button-row {
     position: absolute;
-    bottom: -9vh;
+    bottom: -7vh;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
