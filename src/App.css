@@ -150,19 +150,19 @@ input[type=number] {
   }
 
   .mergeSort__container {
-    display: none !important;
-    /* margin: 0 0 1em 0; */
-    /* position: absolute;
-    bottom: -42vh; */
-    /* width: 90%; */
+    display: none;
+    /* margin: 0 0 1em 0;
+    position: absolute;
+    bottom: -42vh;
+    width: 90%; */
   }
 
   /* .mergeSort {
     font-size: 2em;
-  }
+  } */
 
-  .mergeSort__top {
-    /* left: 10vw !important; */
+  /* .mergeSort__top {
+    left: 10vw !important;
   } */
 
   button {
