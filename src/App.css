@@ -13,6 +13,7 @@ body {
 
 .array-container {
   flex: 1;
+  height: 80% !important;
 }
 
 .array-bar {
