@@ -7,10 +7,10 @@ export default class SortingVisualizer extends React.Component {
 
 		this.state = {
 			array: [],
-      arrayBars: '350',
-      animationSpeed: 1,
-      primaryColor: '#fff',
-      startingColor: '#ed3330'
+			arrayBars: window.innerWidth <= 600 ? '80' : '350',
+			animationSpeed: 1,
+			primaryColor: '#fff',
+			startingColor: '#ed3330',
 		};
 	}
 
@@ -60,7 +60,7 @@ export default class SortingVisualizer extends React.Component {
 
 	randomColor() {
 		let randomColor = '#' + Math.random().toString(16).slice(2, 8);
-		this.setState({ startingColor: randomColor})
+		this.setState({ startingColor: randomColor });
 		this.resetArray();
 	}
 
@@ -85,7 +85,7 @@ export default class SortingVisualizer extends React.Component {
 						<div
 							className="array-bar"
 							key={idx}
-							style={{ height: `${value}px`, backgroundColor: this.state.startingColor}}
+							style={{ height: `${value}px`, backgroundColor: this.state.startingColor }}
 						></div>
 					))}
 				</div>
@@ -93,19 +93,24 @@ export default class SortingVisualizer extends React.Component {
 					<p className="mergeSort mergeSort__top">MERGE SORT</p>
 					<p className="mergeSort mergeSort__bot">MERGE SORT</p>
 				</div>
-        
+
 				<div className="button-row">
 					<button onClick={() => this.resetArray()}>Generate New Array</button>
 					<button onClick={() => this.mergeSort()}>Merge Sort</button>
 					<button onClick={() => this.randomColor()}>Random Color</button>
 
-					<label>
-						Enter a number to change length of array
-					</label>
-					<input type="number" name="input" value={this.state.input} onChange={this.handleChange.bind(this)} />
-					<button type="button" onClick={() => this.handleClick()}>Enter</button>
+					<label>Enter a number to change length of array</label>
+					<input
+						type="number"
+						name="input"
+						value={this.state.input}
+						onChange={this.handleChange.bind(this)}
+					/>
+					<button type="button" onClick={() => this.handleClick()}>
+						Enter
+					</button>
 				</div>
-        <h1 className="length">Current Array Length: {this.state.arrayBars}</h1>
+				<h1 className="length">Current Array Length: {this.state.arrayBars}</h1>
 			</>
 		);
 	}
