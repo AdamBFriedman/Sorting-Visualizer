@@ -21,6 +21,7 @@ body {
   bottom: 1vh;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 100vw;
 }
 
 button {
@@ -38,7 +39,9 @@ button {
 }
 
 button:hover {
-  background: #434343;
+  background: linear-gradient(rgb(240, 220, 200), rgb(230, 200, 160));
+  color: #ed3330 !important;
+  font-weight: bolder;
   letter-spacing: 1px;
   -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
   -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
@@ -48,6 +51,27 @@ button:hover {
 
 label {
   color: white;
+  font-size: 2em;
+}
+
+input {
+  width: 4em;
+  height: 3em;
+  margin-left: 5px;
+  text-align: center;
+  display: inline-block;
+}
+
+/* Remove arrows from input */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }
 
 /*Typeface for "Merge Sort" */
@@ -102,4 +126,61 @@ label {
 
 .length {
   color: white;
+}
+
+@media only screen and (max-width: 600px) {
+
+  .array-container {
+    /* position: absolute;
+    top: -50vh;
+    height: 30vh; */
+  }
+
+  .array-bar {
+    /* height: 10vh !important; */
+    height: 30vh;
+  }
+
+  .mergeSort__container {
+    margin: 0 0 1em 0;
+    position: absolute;
+    bottom: -42vh;
+    width: 90%;
+  }
+
+  .mergeSort {
+    font-size: 2em;
+  }
+
+  button {
+    /* transform: scale(0.5); */
+    margin: 5px 0;
+    padding: 0.5em;
+    bottom: 0 !important;
+  }
+
+  .button-row {
+    position: absolute;
+    bottom: 1vh;
+    left: 50%;
+    transform: translate(-50%, 120%);
+    width: 50%;
+  }
+
+  label {
+    color: white;
+    font-size: 1em;
+    display: inline-block;
+  }
+
+  input {
+    width: 2em;
+    height: 1em;
+    margin: 0 1em 0 0;
+    font-size: 1em;
+  }
+
+  .length {
+    font-size: 1em;
+  }
 }

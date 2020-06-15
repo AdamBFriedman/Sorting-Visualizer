@@ -102,7 +102,7 @@ export default class SortingVisualizer extends React.Component {
 					<label>
 						Enter a number to change length of array
 					</label>
-					<input type="text" name="input" value={this.state.input} onChange={this.handleChange.bind(this)} />
+					<input type="number" name="input" value={this.state.input} onChange={this.handleChange.bind(this)} />
 					<button type="button" onClick={() => this.handleClick()}>Enter</button>
 				</div>
         <h1 className="length">Current Array Length: {this.state.arrayBars}</h1>
