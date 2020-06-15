@@ -7,7 +7,7 @@ export default class SortingVisualizer extends React.Component {
 
 		this.state = {
 			array: [],
-			arrayBars: window.innerWidth <= 600 ? '80' : '350',
+			arrayBars: window.innerWidth <= 600 ? '100' : '350',
 			animationSpeed: 1,
 			primaryColor: '#fff',
 			startingColor: '#ed3330',
