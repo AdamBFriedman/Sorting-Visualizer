@@ -1,3 +1,7 @@
+:root {
+  --primary-color: #ed3330;
+}
+
 body {
   text-align: center;
   background-color: #051e3e;
@@ -31,7 +35,7 @@ button {
   color: #fff !important;
   text-transform: uppercase;
   text-decoration: none;
-  background: #ed3330;
+  background: var(--primary-color);
   padding: 20px;
   border-radius: 5px;
   display: inline-block;
@@ -42,12 +46,12 @@ button {
 
 button:hover {
   background: linear-gradient(rgb(240, 220, 200), rgb(230, 200, 160));
-  color: #ed3330 !important;
+  color: var(--primary-color) !important;
   font-weight: bolder;
   letter-spacing: 1px;
-  -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
-  -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
-  box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
+  -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  box-shadow: 5px 40px -10px rgba(0, 0, 0, 0.57);
   transition: all 0.4s ease 0s;
 }
 
@@ -72,7 +76,7 @@ input::-webkit-inner-spin-button {
 }
 
 /* Firefox */
-input[type=number] {
+input[type='number'] {
   -moz-appearance: textfield;
 }
 
@@ -100,34 +104,11 @@ input[type=number] {
   text-fill-color: transparent;
 }
 
-.mergeSort__bot {
-  text-shadow: 
-    2px 1px #ed3330,
-    4px 2px #ed3330,
-    6px 4px #ed3330,
-    8px 5px #ed3330,
-    10px 6px #ed3330,
-    12px 7px #ed3330,
-    14px 8px #ed3330,
-    16px 9px black,
-    18px 10px black,
-    20px 11px black,
-    22px 12px black,
-    24px 13px black,
-    28px 14px rgba(0, 0, 0, 0.9),
-    30px 15px rgba(0, 0, 0, 0.7),
-    32px 16px rgba(0, 0, 0, 0.5),
-    34px 17px rgba(0, 0, 0, 0.3),
-    36px 18px rgba(0, 0, 0, 0.1),
-    40px 20px rgba(0, 0, 0, 0.1);
-}
-
 .length {
   color: white;
 }
 
 @media only screen and (max-width: 600px) {
-
   .array-container {
     position: absolute;
     top: -8vh;
